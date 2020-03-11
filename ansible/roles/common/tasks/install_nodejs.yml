@@ -1,0 +1,12 @@
+- name: Install nodejs 
+  apt: name={{ item }}
+  with_items:
+         - nodejs
+         - npm
+- name: Copy Feature_1 Code 
+  command: cp -r ../code/ /var/www/{{ http_host1 }}
+
+- name: Start Application
+  command: chdir=/var/www/{{ http_host1 }}  npm install --production
+  notify: 
+   - Reload Apache
