@@ -1,6 +1,6 @@
 - name: Install nodejs 
   apt: name=npm state=present
-- name: Copy Feature_1 Code 
+- name: Copy Feature_2 Code 
   command: cp -r ../code/ /var/www/{{ http_host3 }}
 
 - name: Start Application
