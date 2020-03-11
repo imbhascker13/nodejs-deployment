@@ -1,9 +1,7 @@
 - name: Install nodejs 
-  apt: name={{ item }}
-  with_items:
-         - nodejs
-         - npm
-- name: Copy Feature_1 Code 
+  apt: name=npm state=present
+  
+- name: Copy Feature_2 Code 
   command: cp -r ../code/ /var/www/{{ http_host2 }}
 
 - name: Start Application
