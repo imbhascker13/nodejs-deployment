@@ -1,6 +1,6 @@
 ---
-# handlers file for common
-# - name: Restart Apache
-#   service:
-#   name: apache2
-#   state: restarted
+ #handlers file for common
+ - name: Restart Apache
+   service:
+     name: apache2
+     state: restarted
