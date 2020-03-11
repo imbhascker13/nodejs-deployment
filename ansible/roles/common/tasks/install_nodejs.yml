@@ -4,9 +4,9 @@
          - nodejs
          - npm
 - name: Copy Feature_1 Code 
-  command: cp -r ../code/ /var/www/{{ http_host1 }}
+  command: cp -r ../code/ /var/www/{{ http_host2 }}
 
 - name: Start Application
-  command: chdir=/var/www/{{ http_host1 }}  npm install --production
+  command: chdir=/var/www/{{ http_host2 }}  npm install --production
   notify: 
    - Reload Apache
