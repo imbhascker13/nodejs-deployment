@@ -1,4 +1,4 @@
-- name: Install nodejs 
+- name: Install npm
   apt: name=npm state=present
   
 - name: Copy Feature_2 Code 
