@@ -4,7 +4,7 @@ node {
   git branch:'feature_3', url:'https://github.com/Shyamjith06/nodejs_deployment.git'
   }
   stage('ansible deploy'){
-  sh label: 'ansible', script: 'ansible-playbook playbook.yml'
+  sh label: 'ansible', script: 'ansible-playbook playbook.yml -u Shyam -i inventory'
 }
 }
 
