@@ -1,9 +1,9 @@
 - name: Install nodejs 
   apt: name=npm state=present
-- name: Copy Feature_2 Code 
+- name: Copy Feature_3 Code 
   command: cp -r ../code/. /var/www/{{ http_host3 }}
 
 - name: Start Application
   command: chdir=/var/www/{{ http_host3 }}  npm install --production
   notify: 
-   - Reload Apache
+   - Restart Apache
