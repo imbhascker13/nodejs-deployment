@@ -19,8 +19,6 @@ var handlebars = require('express-handlebars').create({
 //Intialise express framework
 var app = express();
 
-app.use(morgan('dev')); // log every request to the console
-mongoose.connect('mongodb://127.0.0.1:27017/samplenodejsapp')
 
 require('./src/middleware/passport')(passport);
 
