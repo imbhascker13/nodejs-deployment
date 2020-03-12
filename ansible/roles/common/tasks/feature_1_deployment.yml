@@ -2,7 +2,7 @@
   apt: name=npm  state=present
           
 - name: Copy Feature_1 Code 
-  command: cp -r ../code/. /var/www/{{ http_host1 }}
+  copy: src=../code/. dest=/var/www/{{ http_host1 }}
 
 - name: Start Application
   command: chdir=/var/www/{{ http_host1 }}  npm install --production
