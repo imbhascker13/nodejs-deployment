@@ -1,10 +1,10 @@
 node {
 
   stage('Git-Checkout') {
-  git branch:'feature_1', url:'https://github.com/Shyamjith06/nodejs_deployment.git'
+  git branch:'feature_1', url:'https://github.com/imbhascker13/nodejs-deployment.git'
   }
   stage('ansible deploy'){
-  sh label: 'ansible', script: 'ansible-playbook ansible/playbook.yml -u Shyam -i ansible/inventory'
+  sh label: 'ansible', script: 'ansible-playbook ansible/playbook.yml'
 }
 }
 
